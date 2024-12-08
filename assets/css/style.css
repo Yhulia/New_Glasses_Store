@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+header {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.brand-name {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  max-height: 60px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #aaaaaa;
+}
+
+.divider {
+  width: 100%;
+  border: none;
+  height: 2px;
+  background-color: #cecece; /* Warna garis */
+  margin: 0 0 20px; /* Margin atas dan bawah */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+.image-card {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+}
+
+/* Gambar pertama menempati seluruh lebar layar dan tinggi diatur */
+.full-width {
+  width: 100%;
+}
+
+.full-width img {
+  height: 280px;
+}
+
+/* Container untuk gambar kedua dan ketiga */
+.image-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Gambar kedua dan ketiga disesuaikan dengan ukuran layar */
+.half-width {
+  flex: 1;
+}
+
+.half-width img {
+  height: 200px;
+  width: 100%;
+}
+
+/* Gaya untuk section Best Sale */
+.product-gallery {
+  width: 100%;
+  overflow: hidden;
+  position: relative; /* Agar tombol dapat diposisikan relatif */
+}
+
+.product-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.product-card {
+  min-width: 200px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1;
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+.best-sale {
+  width: 100%;
+  max-width: 1200px; /* Ukuran maksimum untuk konten */
+  margin-top: 20px; /* Jarak atas dari elemen sebelumnya */
+}
+
+.best-sale h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* Mengatur layout grid responsif */
+  gap: 20px; /* Jarak antara produk */
+}
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 200px; /* Sesuaikan lebar kartu produk */
+  display: flex;
+  flex-direction: column; /* Mengatur isi menjadi kolom */
+  align-items: center; /* Mengatur semua item agar berada di tengah secara horizontal */
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Menambahkan jarak antara gambar dan teks */
+}
+
+.buy-now {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: auto; /* Menggunakan auto untuk menekan tombol ke bagian bawah */
+}
+
+.buy-now:hover {
+  background-color: #0056b3;
+}
